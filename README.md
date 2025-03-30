@@ -3,7 +3,7 @@ Hello, here is a project which uses AI to generate the reply of an email receive
 The project uses Gemini AI tool to generate professional replies by analysing the received mail.<br><br>
 TECHNOLOGIES USED :<br>
 Java<br>
-JavaScript<br>
+React<br>
 Spring Boot<br>
 Spring Web MVC<br>
 Spring AI<br>
