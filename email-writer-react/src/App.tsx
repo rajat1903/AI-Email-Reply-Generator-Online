@@ -41,6 +41,22 @@ const App: React.FC = () => {
 
   return (
     <div className="app-container">
+      {/* Floating mail background */}
+      <div className="floating-mails-bg" aria-hidden="true">
+        {[...Array(10)].map((_, i) => (
+          <svg
+            key={i}
+            className={`floating-mail mail-${i}`}
+            width="32" height="32" viewBox="0 0 32 32"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            style={{ position: 'absolute' }}
+          >
+            <rect x="2" y="8" width="28" height="16" rx="3" fill="#fff" stroke="#3b82f6" strokeWidth="2"/>
+            <polyline points="2,8 16,20 30,8" fill="none" stroke="#2563eb" strokeWidth="2"/>
+          </svg>
+        ))}
+      </div>
       {/* Decorative SVG Blobs */}
       <svg style={{ position: 'absolute', top: '-5%', left: '-10%', width: '40vw', height: '40vh', zIndex: 0, opacity: 0.5 }} viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
         <path fill="#f59e0b" d="M39.6,-58.9C52.7,-51.8,65.8,-42.9,73.1,-30.5C80.4,-18.1,82,-2.3,77.7,11.3C73.4,25,63.2,36.5,51.8,45.8C40.4,55.1,27.8,62.2,14.7,65.4C1.7,68.6,-11.9,67.9,-25,63.3C-38.1,58.7,-50.7,50.2,-58.8,38.8C-67,27.4,-70.7,13.2,-70.3, -0.7C-70,-14.5,-65.6,-28.1,-56.9,-37.8C-48.2,-47.5,-35.1,-53.3,-22.6,-57.8C-10.1,-62.3,-1.4,-65.4,8.1,-66.4C17.6,-67.4,36.1,-66.2,39.6,-58.9Z" transform="translate(100 100)" />
@@ -51,9 +67,11 @@ const App: React.FC = () => {
 
       <header className="app-header">
         <h1>
-          <svg xmlns="http://www.w3.org/2000/svg" className="header-icon" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
-          </svg>
+          <span style={{ display: 'inline-flex', alignItems: 'center', position: 'relative' }}>
+            <svg xmlns="http://www.w3.org/2000/svg" className="header-icon" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 5-8-5h16zm0 12H4V8l8 5 8-5v10z"/>
+            </svg>
+          </span>
           Online Email Reply Generator
         </h1>
         <p>Generate a smart reply instantly using AI!</p>
@@ -64,53 +82,17 @@ const App: React.FC = () => {
             <p>Let AI handle your email replies, so you can focus on what matters most. Fast, smart, and professional.</p>
           </div>
           <div className="hero-illustration">
-            {/* Colorful static SVG of an opening mail */}
-            <svg width="250" height="250" viewBox="0 0 130 130" xmlns="http://www.w3.org/2000/svg">
+            {/* Large modern email icon */}
+            <svg width="180" height="180" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ display: 'block', margin: '0 auto', filter: 'drop-shadow(0 4px 24px #3b82f655)' }}>
+              <rect x="6" y="16" width="52" height="32" rx="6" fill="#fff" stroke="#2563eb" strokeWidth="3"/>
+              <polyline points="6,16 32,40 58,16" fill="none" stroke="#3b82f6" strokeWidth="3"/>
+              <rect x="6" y="16" width="52" height="32" rx="6" fill="url(#mailGrad)" fillOpacity="0.08"/>
               <defs>
-                <linearGradient id="grad-rainbow" x1="0%" y1="0%" x2="100%" y2="0%">
-                  <stop offset="0%" stop-color="#ef4444" />
-                  <stop offset="20%" stop-color="#f97316" />
-                  <stop offset="40%" stop-color="#eab308" />
-                  <stop offset="60%" stop-color="#22c55e" />
-                  <stop offset="80%" stop-color="#3b82f6" />
-                  <stop offset="100%" stop-color="#8b5cf6" />
+                <linearGradient id="mailGrad" x1="6" y1="16" x2="58" y2="48" gradientUnits="userSpaceOnUse">
+                  <stop stopColor="#3b82f6"/>
+                  <stop offset="1" stopColor="#2563eb"/>
                 </linearGradient>
-                <filter id="drop-shadow" x="-20%" y="-20%" width="140%" height="140%">
-                  <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
-                  <feOffset dx="3" dy="3" />
-                  <feComponentTransfer>
-                    <feFuncA type="linear" slope="0.2"/>
-                  </feComponentTransfer>
-                  <feMerge>
-                    <feMergeNode />
-                    <feMergeNode in="SourceGraphic" />
-                  </feMerge>
-                </filter>
               </defs>
-              <g transform="translate(0, 10)">
-                <g filter="url(#drop-shadow)">
-                  {/* The paper that is peeking out */}
-                  <rect x="20" y="25" width="90" height="70" fill="#e3f2fd" stroke="#d1d5db" rx="4" />
-                  
-                  {/* Lines on the paper */}
-                  <g fill="none" stroke="#a5b4fc" stroke-width="2.5" stroke-linecap="round">
-                    <path d="M35 40 h 60" />
-                    <path d="M35 55 h 60" />
-                    <path d="M35 70 h 40" />
-                  </g>
-                  
-                  {/* The main body of the envelope */}
-                  <path d="M10 60 L65 95 L120 60 L120 120 L10 120 Z" fill="#fffde7" stroke="#d1d5db" strokeWidth="1"/>
-                  <path d="M10 120 L10 60 L65 95 L120 60 L120 120 Z" fill="#fffef0"/>
-                  
-                  {/* Explicit bottom border to ensure visibility */}
-                  <path d="M10 120 h 110" stroke="#d1d5db" strokeWidth="1" />
-
-                  {/* Stamp */}
-                  <rect x="95" y="65" width="20" height="25" fill="#f87171" stroke="#dc2626" strokeWidth="1" />
-
-                </g>
-              </g>
             </svg>
           </div>
         </div>
@@ -136,16 +118,31 @@ const App: React.FC = () => {
           className="generate-btn"
           onClick={handleGenerate}
           disabled={loading || !prompt.trim()}
+          style={loading ? { background: 'linear-gradient(90deg, #8b5cf6 0%, #f59e0b 100%)', position: 'relative' } : {}}
         >
-          {loading ? 'Generating...' : 'Generate Reply'}
+          {loading ? (
+            <span style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem' }}>
+              <span className="shimmer" style={{ width: 18, height: 18, borderRadius: '50%', background: 'linear-gradient(90deg, #f59e0b 25%, #ef4444 50%, #8b5cf6 75%)', animation: 'shimmerSpin 1.1s linear infinite' }}></span>
+              Generating...
+            </span>
+          ) : 'Generate Reply'}
         </button>
         {error && <div className="error-message">{error}</div>}
         {reply && (
           <div className="reply-section">
             <div className="reply-header">
               <h2>Generated Reply</h2>
-              <button className="copy-btn" onClick={handleCopy} disabled={!reply}>
-                {isCopied ? 'Copied!' : 'Copy'}
+              <button className="copy-btn" onClick={handleCopy} disabled={!reply} aria-label={isCopied ? 'Copied!' : 'Copy to clipboard'}>
+                {isCopied ? (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" style={{ verticalAlign: 'middle' }}>
+                    <path fill="#22c55e" d="M9.29 16.29a1 1 0 0 1-1.42 0l-3-3a1 1 0 1 1 1.42-1.42l2.3 2.29 5.3-5.29a1 1 0 1 1 1.42 1.42l-6 6z"/>
+                  </svg>
+                ) : (
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" viewBox="0 0 24 24" style={{ verticalAlign: 'middle' }}>
+                    <rect x="9" y="9" width="13" height="13" rx="2" fill="#4f46e5" fillOpacity="0.15" stroke="#4f46e5" strokeWidth="2"/>
+                    <rect x="3" y="3" width="13" height="13" rx="2" fill="#fff" stroke="#4f46e5" strokeWidth="2"/>
+                  </svg>
+                )}
               </button>
             </div>
             <div className="reply-box">{reply}</div>
