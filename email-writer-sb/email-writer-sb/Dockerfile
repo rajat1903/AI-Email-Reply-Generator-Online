@@ -7,7 +7,5 @@ WORKDIR /app
 COPY . .
 RUN chmod +x mvnw
 RUN ./mvnw clean package
-COPY target/email-writer-sb-*.jar app.jar
 
-# Run the jar file
-ENTRYPOINT ["java", "-jar", "app.jar"]
+ENTRYPOINT ["java", "-jar", "target/email-writer-sb-*.jar"]
