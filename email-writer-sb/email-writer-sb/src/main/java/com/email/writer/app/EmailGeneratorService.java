@@ -76,7 +76,7 @@ public class EmailGeneratorService {
 
     private String buildPrompt(EmailRequest emailRequest) {
         StringBuilder prompt = new StringBuilder();
-        prompt.append("Generate a professional email reply for the following email content. Please don't generate a subject line ");
+        prompt.append("Generate a professional email reply for the following email content. The reply should be in a standard email format. Do not include a subject line. ");
 
         // Assuming tone is a String, you should have a method that returns a String instead of boolean
         String tone = emailRequest.getTone(); // Change this to return String if needed
