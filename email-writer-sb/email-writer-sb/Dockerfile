@@ -5,6 +5,7 @@ FROM openjdk:21-jdk-slim
 WORKDIR /app
 
 COPY . .
+RUN chmod +x mvnw
 RUN ./mvnw clean package
 COPY target/email-writer-sb-*.jar app.jar
 
