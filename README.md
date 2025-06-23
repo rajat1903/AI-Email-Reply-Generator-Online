@@ -1,4 +1,4 @@
-﻿# AI Email Reply Generator
+﻿# AI Email Reply Generator Online
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0a89d538-caa8-4707-ad50-454b974e3600/deploy-status)](https://app.netlify.com/projects/email-reply-generator-online/deploys)
 
