@@ -1,40 +1,94 @@
-﻿# AI-Email-Reply-Generator
-Hello, here is a project which uses AI to generate the reply of an email received via Gmail.<br><br>
-The project uses Gemini AI tool to generate professional replies by analysing the received mail.<br><br>
-TECHNOLOGIES USED :<br>
-Java<br>
-React<br>
-Spring Boot<br>
-Spring Web MVC<br>
-Spring AI<br>
-Google Gemini API<br>
-Lombok<br><br> 
+﻿# AI Email Reply Generator
 
-Steps to use the project :<br><br>
-1. First start your spring boot project.<br>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0a89d538-caa8-4707-ad50-454b974e3600/deploy-status)](https://app.netlify.com/projects/email-reply-generator-online/deploys)
 
+## 🚀 Live Demo
+- **Frontend (React on Netlify):** [https://email-reply-generator-online.netlify.app/](https://email-reply-generator-online.netlify.app/)
+- **Backend (Spring Boot on Render):** [https://aierg2.onrender.com](https://aierg2.onrender.com)
 
+---
 
+## 📧 Project Overview
+AI Email Reply Generator is a web application that helps you generate smart, professional, and context-aware email replies instantly using AI. The app is designed to save you time and boost productivity by automating the process of drafting email responses.
 
-![image](https://github.com/user-attachments/assets/f4fa3129-8cda-48a9-9e5a-00318d38739e)
-<br><br>
+---
 
-2. Make sure to turn on your extension.<br>
+## ✨ Features
+- Generate AI-powered email replies in seconds
+- Choose the tone of your reply (e.g., professional, friendly)
+- Copy generated replies to clipboard with one click
+- Responsive and modern UI
+- Fast and reliable backend
 
+---
 
-![image](https://github.com/user-attachments/assets/38287140-ae0d-4aeb-9ac7-f446335e5d90)<br><br>
+## 🛠️ Tech Stack
+- **Frontend:** React, TypeScript, CSS
+- **Backend:** Spring Boot (Java 21), REST API
+- **Deployment:**
+  - Frontend: [Netlify](https://email-reply-generator-online.netlify.app/)
+  - Backend: [Render](https://aierg2.onrender.com)
 
-3. Open your Gmail Account.<br>
+---
 
-![image](https://github.com/user-attachments/assets/5b86bf39-060c-4c9d-ae94-64f460498611)<br><br>
+## 🖥️ Local Setup
 
-4. Click on AI Reply button.<br>
+### Prerequisites
+- Node.js & npm
+- Java 21 & Maven
 
-![image](https://github.com/user-attachments/assets/4aec7180-0262-4875-ad73-7b13e781b02c)<br><br>
+### 1. Clone the repository
+```bash
+git clone https://github.com/rajat1903/AIERG2.git
+cd AIERG2
+```
 
-5.  A profesional AI reply will be generated accordingly.<br>
+### 2. Start the Backend
+```bash
+cd email-writer-sb/email-writer-sb
+./mvnw clean package
+java -jar target/email-writer-sb-0.0.1-SNAPSHOT.jar
+```
+The backend will run on [http://localhost:8080](http://localhost:8080)
 
-![image](https://github.com/user-attachments/assets/1d834545-007e-457d-ad73-730682f01d9c)<br><br>
+### 3. Start the Frontend
+```bash
+cd ../../email-writer-react
+npm install
+npm start
+```
+The frontend will run on [http://localhost:3000](http://localhost:3000)
+
+---
+
+## 🌐 Deployment
+- **Frontend:** Automatically deployed to Netlify on push to main branch.
+- **Backend:** Automatically deployed to Render on push to main branch.
+
+---
+
+## 📄 Usage
+1. Open the [live frontend](https://email-reply-generator-online.netlify.app/)
+2. Enter your email content and select the desired tone
+3. Click "Generate Reply"
+4. Copy and use the AI-generated reply in your email client
+
+---
+
+## 🤝 Contributing
+Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
+
+---
+
+## 📬 Contact
+- [GitHub](https://github.com/rajat1903)
+- [Live Frontend](https://email-reply-generator-online.netlify.app/)
+- [Live Backend](https://aierg2.onrender.com)
+
+---
+
+## 📝 License
+This project is licensed under the MIT License.
 
 
 
