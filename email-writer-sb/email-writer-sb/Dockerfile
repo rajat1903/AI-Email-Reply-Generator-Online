@@ -8,4 +8,4 @@ COPY . .
 RUN chmod +x mvnw
 RUN ./mvnw clean package
 
-ENTRYPOINT ["java", "-jar", "target/email-writer-sb-*.jar"]
+ENTRYPOINT ["java", "-jar", "target/email-writer-sb-0.0.1-SNAPSHOT.jar"]
