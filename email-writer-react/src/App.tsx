@@ -15,7 +15,7 @@ const App: React.FC = () => {
     setReply('');
     try {
       // Correct backend API endpoint and payload
-      const response = await fetch('http://localhost:8080/api/email/generate', {
+      const response = await fetch('https://aierg2.onrender.com/api/email/generate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ emailContent: prompt, tone: tone }),
