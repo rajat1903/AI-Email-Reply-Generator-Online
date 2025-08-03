@@ -3,7 +3,7 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/0a89d538-caa8-4707-ad50-454b974e3600/deploy-status)](https://app.netlify.com/projects/email-reply-generator-online/deploys)
 
 ## 🚀 Live Demo
-- **Frontend (React on Netlify):** [https://email-reply-generator-online.netlify.app/](https://email-reply-generator-online.netlify.app/)
+- ** Netlify Deployment:** [https://email-reply-generator-online.netlify.app/](https://email-reply-generator-online.netlify.app/)
 
 ---
 
@@ -88,6 +88,7 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 ## 📝 License
 This project is licensed under the MIT License.
+
 
 
 
