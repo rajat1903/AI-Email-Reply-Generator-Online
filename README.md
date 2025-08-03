@@ -4,7 +4,6 @@
 
 ## 🚀 Live Demo
 - **Frontend (React on Netlify):** [https://email-reply-generator-online.netlify.app/](https://email-reply-generator-online.netlify.app/)
-- **Backend (Spring Boot on Render):** [https://aierg2.onrender.com](https://aierg2.onrender.com)
 
 ---
 
@@ -89,6 +88,7 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 ## 📝 License
 This project is licensed under the MIT License.
+
 
 
 
